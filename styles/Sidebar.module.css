@@ -1,0 +1,21 @@
+.Header {
+    display         : flex;
+    position        : sticky;
+    top             : 0;
+    z-index         : 1;
+    background-color: var(--bg-color);
+    justify-content : space-between;
+    align-items     : center;
+    padding         : 15px;
+    height          : 80px;
+    border-bottom   : 3px solid whitesmoke;
+}
+
+.UserAvatar {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.UserAvatar:hover {
+    opacity: 0.8;
+}
