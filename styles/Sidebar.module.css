@@ -19,3 +19,39 @@
 .UserAvatar:hover {
     opacity: 0.8;
 }
+
+
+.SearchContainer {
+    display      : flex;
+    align-items  : center;
+    padding      : 20px;
+    border-radius: 2px;
+}
+
+.SeachInput {
+    outline-width: 0;
+    border       : 0;
+    flex         : 1;
+}
+
+.ChatInput {
+    outline-width   : 0;
+    border          : 0;
+    flex            : 1;
+    text-align      : center;
+    background-color: rgb(208, 253, 238);
+    padding         : 10px;
+}
+
+.ChatButton {
+    display      : inline-block;
+    border-top   : 2px solid whitesmoke !important;
+    border-bottom: 2px solid whitesmoke !important;
+}
+
+.SidebarButton {
+    width        : 100% !important;
+    border-top   : 2px solid whitesmoke !important;
+    border-bottom: 2px solid whitesmoke !important;
+
+}
