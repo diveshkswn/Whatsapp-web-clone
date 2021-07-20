@@ -41,7 +41,6 @@ export default function Sidebar() {
     // adding event only when createChat is true .ie Start New chat is clicked.
     // And focus on input after click
     if (createChat) { document.addEventListener('keydown', handleChatClose); chatInputRef.current.focus(); }
-
     // removing event on unmount
     return () => { document.removeEventListener('keydown', handleChatClose); };
   }, [createChat]);

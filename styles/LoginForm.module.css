@@ -1,0 +1,11 @@
+.LoginForm {
+    display        : flex;
+    flex-direction : column;
+    height         : 300px;
+    justify-content: space-around;
+
+}
+
+.LoginButton {
+    background-color: rgb(106, 199, 106) !important;
+}

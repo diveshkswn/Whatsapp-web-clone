@@ -1,0 +1,29 @@
+.Logo {
+    position: relative;
+    width   : 45vw;
+    height  : 45vh;
+    margin  : 20px;
+
+
+}
+
+/* .Logo.Min {
+    width : 20vw;
+    height: 20vh;
+
+} */
+
+.Login_Container {
+    background-color: whitesmoke;
+    height          : 100vh;
+    width           : 100vw;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    flex-direction  : column;
+}
+
+.LoginButton {
+    width           : 200px !important;
+    background-color: rgb(106, 199, 106) !important;
+}

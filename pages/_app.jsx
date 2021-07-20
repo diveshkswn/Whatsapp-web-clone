@@ -1,15 +1,15 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import '../styles/globals.css';
-import Head from 'next/head';
 import Layout from '../components/Layout';
+import AuthProvider from '../Context/Authcontext';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-
-    </Layout>
-
+    <AuthProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </AuthProvider>
   );
 }
 

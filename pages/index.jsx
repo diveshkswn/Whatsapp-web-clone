@@ -1,8 +1,15 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import styles from '../styles/Home.module.css';
 import Sidebar from '../components/Sidebar';
+import { useAuth } from '../Context/Authcontext';
 
 export default function Home() {
+  const route = useRouter();
+  const { currentUser } = useAuth();
+
+  // if (!currentUser) { route.push('/login'); return null; }
+
   return (
     <>
       <Head>
