@@ -8,7 +8,7 @@ export default function Home() {
   const route = useRouter();
   const { currentUser } = useAuth();
 
-  // if (!currentUser) { route.push('/login'); return null; }
+  if (!currentUser) { route.push('/login'); return null; }
 
   return (
     <>

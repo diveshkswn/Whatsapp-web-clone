@@ -30,12 +30,14 @@ export default function LoginPage() {
           )}
           {loginFormState && (
           <LoginForm
+            loginFormState={loginFormState}
             setSignupFormState={setSignupFormState}
             setLoginFormState={setLoginFormState}
           />
           ) }
           {signupFormState && (
           <SignupForm
+            signupFormState={signupFormState}
             setSignupFormState={setSignupFormState}
             setLoginFormState={setLoginFormState}
           />
