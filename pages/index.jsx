@@ -10,7 +10,6 @@ export default function Home() {
   const route = useRouter();
   const { currentUser } = useAuth();
 
-  // Updating/Adding user information on every change in currentUser of firebase
   useEffect(() => {
     console.log('Updating user');
     projectFirestore.collection('users').doc(currentUser.uid).set({
