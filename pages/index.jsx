@@ -9,8 +9,7 @@ import { projectFirestore, timestamp } from '../firebase';
 export default function Home() {
   const route = useRouter();
   const { currentUser } = useAuth();
-  const demo = 'Fi';
-
+  const demo = 'Firebase';
   // Updating/Adding user information on every change in currentUser of firebase
   useEffect(() => {
     console.log('Updating user');
