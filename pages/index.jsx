@@ -10,7 +10,8 @@ export default function Home() {
   const route = useRouter();
   const { currentUser } = useAuth();
 
-  const demo = 'Demo';
+  const demo = 'FirebaseMain';
+
 
   // Updating/Adding user information on every change in currentUser of firebase
   useEffect(() => {
