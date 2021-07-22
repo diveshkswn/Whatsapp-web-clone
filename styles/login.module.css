@@ -25,5 +25,5 @@
 
 .LoginButton {
     width           : 200px !important;
-    background-color: rgb(106, 199, 106) !important;
+    background-color: var(--theme-Color) !important;
 }

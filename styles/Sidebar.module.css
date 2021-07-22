@@ -32,6 +32,7 @@
     outline-width: 0;
     border       : 0;
     flex         : 1;
+
 }
 
 .ChatInput {
@@ -54,4 +55,17 @@
     border-top   : 2px solid whitesmoke !important;
     border-bottom: 2px solid whitesmoke !important;
 
+}
+
+.AvatarPanel {
+    position        : absolute;
+    top             : 65px;
+    background-color: var(--theme-Color);
+    padding         : 10px;
+    border-radius   : 10px;
+    cursor          : pointer;
+}
+
+.StartChatContainer {
+    /* width: 400px; */
 }

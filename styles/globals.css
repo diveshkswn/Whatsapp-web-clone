@@ -1,6 +1,7 @@
 html,
 :root {
-  --bg-color: white;
+  --bg-color   : white;
+  --theme-Color: rgb(106, 199, 106);
 }
 
 body {
