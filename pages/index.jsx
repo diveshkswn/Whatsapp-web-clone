@@ -32,7 +32,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.container}>
-        <Sidebar />
+        <div className={styles.SidebarContainer}>
+          <Sidebar />
+        </div>
       </div>
     </>
   );

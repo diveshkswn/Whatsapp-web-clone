@@ -4,6 +4,12 @@ html,
   --theme-Color: rgb(106, 199, 106);
 }
 
+.dark {
+  --bg-color   : black;
+  --theme-Color: rgb(46, 87, 46);
+
+}
+
 body {
   padding: 0;
   margin : 0;

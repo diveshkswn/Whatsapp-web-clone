@@ -1,4 +1,16 @@
 .container {
+  width  : 100vw;
+  height : 100vh;
+  display: flex;
+}
 
-  height: 100vh;
+.SidebarContainer {
+  overflow          : scroll;
+  height            : 100vh;
+  -ms-overflow-style: none;
+  scrollbar-width   : none;
+}
+
+.SidebarContainer::-webkit-scrollbar {
+  display: none;
 }

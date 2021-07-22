@@ -16,7 +16,7 @@ import { useCollection } from 'react-firebase-hooks/firestore';
 import styles from '../styles/Sidebar.module.css';
 import { logout, useAuth } from '../Context/Authcontext';
 import { projectFirestore } from '../firebase';
-// 1:38
+import Chat from './Chat';
 
 export default function Sidebar() {
   const { currentUser } = useAuth();
@@ -135,7 +135,7 @@ export default function Sidebar() {
       </div>
       <div className={styles.StartChatContainer}>
         {createChat ? (
-          <>
+          <div className={styles.newChatInput}>
             <input
               ref={chatInputRef}
               value={chatInputState}
@@ -145,10 +145,14 @@ export default function Sidebar() {
             />
 
             <Button type="button" onClick={handleStartChatSubmit} className={styles.ChatButton} disabled={disabled}>Start Chat</Button>
-          </>
+          </div>
         ) : <Button type="button" onClick={() => { setCreateChat((val) => !val); }} className={styles.SidebarButton}>START A NEW CHAT</Button> }
         {error && <Alert severity="error">{error}</Alert>}
       </div>
+
+      {/* List of chats */}
+      {chatSnapshot?.docs.map((chat) => <Chat key={chat.id} id={chat.id} users={chat.data().users} />)}
+
     </div>
 
   );

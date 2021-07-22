@@ -1,3 +1,10 @@
+.container {
+
+    width : 400px;
+    height: 150vh;
+
+}
+
 .Header {
     display         : flex;
     position        : sticky;
@@ -32,7 +39,11 @@
     outline-width: 0;
     border       : 0;
     flex         : 1;
+}
 
+.newChatInput {
+    width  : 100% !important;
+    display: flex;
 }
 
 .ChatInput {
