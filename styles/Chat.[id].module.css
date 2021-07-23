@@ -1,13 +1,15 @@
 .Container {
     display: flex;
-    width  : 100vw;
-    height : 100vh;
+
+    height: 100vh;
+    width : 100vw;
 
 }
 
 
 
 .SidebarContainer {
+    flex              : .3;
     overflow          : scroll;
     height            : 100vh;
     -ms-overflow-style: none;
@@ -16,4 +18,9 @@
 
 .SidebarContainer::-webkit-scrollbar {
     display: none;
+}
+
+.chatContainer {
+    flex       : .85;
+    border-left: 1px solid whitesmoke;
 }

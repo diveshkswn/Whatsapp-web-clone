@@ -1,0 +1,16 @@
+.ChatHeader {
+    position        : sticky;
+    background-color: var(--theme-Color-Light);
+    height          : 80px;
+    padding         : 10px;
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    color           : whitesmoke;
+
+}
+
+.HeaderInfo {
+    flex       : 1;
+    margin-left: 20px;
+}

@@ -1,16 +1,18 @@
 html,
 :root {
-  --bg-color   : white;
-  --theme-Color: rgb(106, 199, 106);
+  --bg-color         : white;
+  --theme-Color      : rgb(106, 199, 106);
+  --theme-Color-Light: hsl(120, 31%, 40%);
 }
 
 .dark {
-  --bg-color   : black;
-  --theme-Color: rgb(46, 87, 46);
-
+  --bg-color         : black;
+  --theme-Color      : rgb(46, 87, 46);
+  --theme-Color-Light: hsl(120, 37%, 54%);
 }
 
 body {
+  width  : 100vw;
   padding: 0;
   margin : 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
