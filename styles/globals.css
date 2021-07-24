@@ -1,8 +1,8 @@
 html,
 :root {
   --bg-color         : white;
-  --theme-Color      : rgb(106, 199, 106);
-  --theme-Color-Light: hsl(120, 31%, 40%);
+  --theme-Color      : #25d366;
+  --theme-Color-Light: #075e54;
 }
 
 .dark {

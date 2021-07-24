@@ -39,6 +39,7 @@ export async function getServerSideProps(context) {
   const messages = responseMessages.docs.map((doc) => ({
     id: doc.id,
     ...doc.data(),
+  // eslint-disable-next-line no-shadow
   })).map((messages) => ({
     ...messages,
     timestamp: messages.timestamp.toDate().getTime(),

@@ -1,7 +1,8 @@
 .container {
 
-    max-width: 400px;
-    height   : 150vh;
+    max-width   : 400px;
+    min-height  : 110vh;
+    border-right: 1px solid whitesmoke;
 
 
 }

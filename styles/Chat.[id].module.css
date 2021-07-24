@@ -1,15 +1,16 @@
 .Container {
     display: flex;
 
-    height: 100vh;
-    width : 100vw;
+    height    : 100vh;
+    width     : 100vw;
+    overflow-x: hidden;
 
 }
 
 
 
 .SidebarContainer {
-    flex              : .3;
+    flex              : .25;
     overflow          : scroll;
     height            : 100vh;
     -ms-overflow-style: none;
