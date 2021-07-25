@@ -1,9 +1,18 @@
 html,
 :root {
-  --bg-color         : white;
-  --theme-Color      : #25d366;
-  --theme-Color-Light: #075e54;
+  --text-Color            : whitesmoke;
+  --text-Color-Info       : rgb(197, 196, 196);
+  --bg-Color              : white;
+  --bg-Color-Secondary    : whitesmoke;
+  --theme-Color-Secondary : #25d366;
+  --theme-Color-Primary   : #075e54;
+  --chat-Sender-Bg-Color  : #dcf8c6;
+  --chat-Receiver-Bg-Color: whitesmoke;
+  --chat-Hover-Color      : #e9eaeb;
+  --chat-Screen-Bg        : #e5ded8;
 }
+
+.light {}
 
 .dark {
   --bg-color         : black;

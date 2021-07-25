@@ -4,14 +4,16 @@ import MoreVert from '@material-ui/icons/MoreVert';
 import SendIcon from '@material-ui/icons/Send';
 import { AttachFile, InsertEmoticon, MicOutlined } from '@material-ui/icons';
 import { useCollection } from 'react-firebase-hooks/firestore';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import TimeAgo from 'timeago-react';
 import styles from '../styles/ChatScreen.module.css';
 import { useAuth } from '../Context/Authcontext';
 import { projectFirestore, timestamp } from '../firebase';
 import Message from './Message';
 import getRecipientEmail from '../utils/getRecipientEmail';
-
+// 3:25
 export default function ChatScreen(props) {
+  const endOfMessageRef = useRef();
   const { chat, messages } = props;
   const [input, setInput] = useState('');
   const { currentUser } = useAuth();
@@ -23,6 +25,10 @@ export default function ChatScreen(props) {
     .doc(routeId)
     .collection('messages')
     .orderBy('timestamp', 'asc'));
+
+  const [recipientSnapshot] = useCollection(
+    projectFirestore.collection('users').where('email', '==', recipientEmail),
+  );
 
   function showMessages() {
     if (messagesSnapshot) {
@@ -66,14 +72,26 @@ export default function ChatScreen(props) {
     setInput('');
   }
 
+  const recipient = recipientSnapshot?.docs?.[0]?.data();
+
   return (
     <div className={styles.ChatScreenContainer}>
       <div className={styles.ChatHeader}>
-        <Avatar />
+        {recipient ? <Avatar src={recipient?.photoURL} />
+          : <Avatar>{recipientEmail?.charAt(0)}</Avatar>}
         <div className={styles.HeaderInfo}>
 
           <h3>{recipientEmail}</h3>
-          <p>Last Seen...</p>
+          {recipientSnapshot ? (
+            <p>
+              Last Seen
+              {' '}
+              {recipient?.lastSeen?.toDate() ? (
+                <TimeAgo datetime={recipient?.lastSeen?.toDate()} />
+              ) : 'Unavailable'}
+            </p>
+          ) : <p>Last Seen...</p>}
+
         </div>
 
         <div className={styles.HeaderIcons}>
@@ -89,7 +107,9 @@ export default function ChatScreen(props) {
         {/* showMessages */}
 
         {showMessages()}
-        <div className={styles.EndOfMessage} />
+
+        {/* End of Messages */}
+        <div ref={endOfMessageRef} className={styles.EndOfMessage} />
       </div>
       <form className={styles.ChatInputContainer} onSubmit={sendMessage}>
         <InsertEmoticon />
@@ -99,7 +119,7 @@ export default function ChatScreen(props) {
           className={styles.Input}
         />
 
-        <IconButton type="submit" disabled={!input} style={{ backgroundColor: 'var(--theme-Color-Light)' }} color="inherit"><SendIcon style={{ color: 'whitesmoke' }} /></IconButton>
+        <IconButton type="submit" disabled={!input} style={{ backgroundColor: 'var(--theme-Color-Primary)' }} color="inherit"><SendIcon style={{ color: 'var(--text-Color)' }} /></IconButton>
 
         <IconButton>
 
