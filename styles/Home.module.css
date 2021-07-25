@@ -24,6 +24,31 @@
 
 .chatContainer {
 
-  flex       : .85;
-  border-left: 1px solid var(--text-Color);
+  flex            : .85;
+  border-left     : 1px solid var(--text-Color);
+  display         : flex;
+  align-items     : center;
+  justify-content : space-around;
+  flex-direction  : column;
+  background-color: var(--loginBg-Color);
+}
+
+
+
+.Logo {
+  position: relative;
+  width   : 30vw;
+  height  : 30vh;
+  margin  : 20px;
+
+
+}
+
+.Author>h3>a {
+  color: var(--theme-Color-Secondary);
+}
+
+.LogoVercel {
+  position: relative;
+  width   : 20vh;
 }

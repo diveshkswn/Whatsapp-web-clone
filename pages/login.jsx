@@ -2,11 +2,14 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { Button } from '@material-ui/core';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import styles from '../styles/login.module.css';
 import LoginForm from '../components/LoginForm';
 import SignupForm from '../components/SignupForm';
 
 export default function LoginPage() {
+  const theme = useSelector((state) => state.themeSwitcher);
+
   const [loginFormState, setLoginFormState] = useState(false);
   const [signupFormState, setSignupFormState] = useState(false);
   return (
@@ -14,7 +17,7 @@ export default function LoginPage() {
       <Head>
         <title>Login</title>
       </Head>
-      <div className={`${styles.Login_Container} dark`}>
+      <div className={`${styles.Login_Container} ${theme.themeDark ? 'dark' : ''}`}>
         <div className={`${styles.Logo} ${styles.Min}`}>
           <Image src="/whatsapp-logo-png-2263.png" layout="fill" objectFit="contain" alt="Whatsapp LOGO" />
         </div>

@@ -24,7 +24,7 @@
 }
 
 .timestampSpan {
-    color     : gray;
+    color     : var(--chat-timeStamp-Color);
     padding   : 10px;
     font-size : 9px;
     position  : absolute;

@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { useSelector } from 'react-redux';
 import Sidebar from '../../components/Sidebar';
 import styles from '../../styles/Chat.[id].module.css';
 import { useAuth } from '../../Context/Authcontext';
@@ -8,13 +9,15 @@ import { projectFirestore } from '../../firebase';
 import getRecipientEmail from '../../utils/getRecipientEmail';
 
 export default function ChatWithId(props) {
+  // redux state
+  const theme = useSelector((state) => state.themeSwitcher);
   const { messages, chat } = props;
   const { currentUser } = useAuth();
   const router = useRouter();
   if (!currentUser) { router.push('/login'); return ''; }
 
   return (
-    <div className={styles.Container}>
+    <div className={`${styles.Container}  ${theme.themeDark ? 'dark' : ''}`}>
       <Head>
         <title>{`Chat with ${getRecipientEmail(chat.users, currentUser)}`}</title>
       </Head>

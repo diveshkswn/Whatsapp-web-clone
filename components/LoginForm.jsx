@@ -5,12 +5,15 @@ import { useRouter } from 'next/router';
 import Alert from '@material-ui/lab/Alert';
 import { useState, useRef } from 'react';
 import Brightness6Icon from '@material-ui/icons/Brightness6';
+import { useDispatch } from 'react-redux';
 import { login } from '../Context/Authcontext';
 import styles from '../styles/LoginForm.module.css';
+import { toggleTheme } from '../redux/features/themeSlice';
 
 export default function LoginForm(props) {
   const { setSignupFormState, setLoginFormState, loginFormState } = props;
   const router = useRouter();
+  const dispatch = useDispatch();
 
   // Inputs
   const passwordRef = useRef();
@@ -57,7 +60,7 @@ export default function LoginForm(props) {
               SIGNUP
             </Button>
           </span>
-          <IconButton>
+          <IconButton onClick={() => { dispatch(toggleTheme()); }}>
             <Brightness6Icon style={{ color: 'var(--icon-Color)' }} />
           </IconButton>
         </form>
