@@ -7,7 +7,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <AuthProvider>
       <Layout>
-        <Component {...pageProps} />
+        <div className="themeContainer">
+          <Component {...pageProps} />
+        </div>
+
       </Layout>
     </AuthProvider>
   );

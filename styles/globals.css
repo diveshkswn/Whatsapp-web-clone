@@ -1,5 +1,6 @@
 html,
 :root {
+  --icon-Color            : inherit;
   --text-Color            : whitesmoke;
   --text-Color-Info       : rgb(197, 196, 196);
   --bg-Color              : white;
@@ -10,15 +11,37 @@ html,
   --chat-Receiver-Bg-Color: whitesmoke;
   --chat-Hover-Color      : #e9eaeb;
   --chat-Screen-Bg        : #e5ded8;
+  --loginBg-Color         : whitesmoke;
+  --textInput-bg          : inherit;
+  --textInput-Color       : inherit;
 }
 
-.light {}
+
+
+
 
 .dark {
-  --bg-color         : black;
-  --theme-Color      : rgb(46, 87, 46);
-  --theme-Color-Light: hsl(120, 37%, 54%);
+  color                  : whitesmoke !important;
+  --loginBg-Color        : #131C21;
+  --icon-Color           : whitesmoke;
+  --textInput-bg         : #353535;
+  --textInput-Color      : whitesmoke;
+  --bg-Color-Secondary   : black;
+  --theme-Color          : rgb(46, 87, 46);
+  --theme-Color-Secondary: hsl(120, 37%, 54%);
+
 }
+
+.MuiFormLabel-root {
+  color: var(--textInput-Color) !important;
+
+}
+
+.MuiFormControl-root {
+  /* background-color: #353535; */
+  background-color: var(--textInput-bg);
+}
+
 
 body {
   width  : 100vw;

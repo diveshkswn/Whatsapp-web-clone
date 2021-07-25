@@ -39,9 +39,9 @@ export default function SignupForm(props) {
     <Grow in={signupFormState}>
       <div className="SignupFormContainer">
         <form className={styles.SignupForm} onSubmit={handleSubmit}>
-          <TextField inputRef={emailRef} label="Email" type="text" />
-          <TextField inputRef={passwordRef} label="Password" type="password" />
-          <TextField inputRef={passwordConfirmRef} label="Confirm Password" type="password" />
+          <TextField inputRef={emailRef} label="Email" type="text" variant="outlined" />
+          <TextField inputRef={passwordRef} label="Password" type="password" variant="outlined" />
+          <TextField inputRef={passwordConfirmRef} label="Confirm Password" type="password" variant="outlined" />
           <Button className={styles.SignupButton} type="submit">
             {loading ? <CircularProgress size={25} /> : 'SIGNUP' }
           </Button>

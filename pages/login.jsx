@@ -14,7 +14,7 @@ export default function LoginPage() {
       <Head>
         <title>Login</title>
       </Head>
-      <div className={styles.Login_Container}>
+      <div className={`${styles.Login_Container} dark`}>
         <div className={`${styles.Logo} ${styles.Min}`}>
           <Image src="/whatsapp-logo-png-2263.png" layout="fill" objectFit="contain" alt="Whatsapp LOGO" />
         </div>

@@ -7,5 +7,5 @@
 }
 
 .SignupButton {
-    background-color: var(--theme-Color) !important;
+    background-color: var(--theme-Color-Secondary) !important;
 }

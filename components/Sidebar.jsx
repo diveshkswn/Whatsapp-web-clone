@@ -6,7 +6,7 @@
 /* eslint-disable jsx-a11y/mouse-events-have-key-events */
 import { SearchOutlined } from '@material-ui/icons';
 import ChatIcon from '@material-ui/icons/Chat';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import Brightness6Icon from '@material-ui/icons/Brightness6';
 import { Button, Avatar, IconButton } from '@material-ui/core';
 import Alert from '@material-ui/lab/Alert';
 import { useEffect, useRef, useState } from 'react';
@@ -120,17 +120,17 @@ export default function Sidebar() {
         )}
         <div className={styles.IconContainer}>
           <IconButton>
-            <ChatIcon />
+            <ChatIcon style={{ color: 'var(--icon-Color)' }} />
           </IconButton>
 
           <IconButton>
-            <MoreVertIcon />
+            <Brightness6Icon style={{ color: 'var(--icon-Color)' }} />
           </IconButton>
         </div>
 
       </div>
       <div className={styles.SearchContainer}>
-        <SearchOutlined />
+        <SearchOutlined style={{ color: 'var(--icon-Color)' }} />
         <input type="text" className={styles.SeachInput} placeholder="Search your chats" />
       </div>
       <div className={styles.StartChatContainer}>

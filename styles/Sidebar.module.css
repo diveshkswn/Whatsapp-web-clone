@@ -19,6 +19,7 @@
     padding         : 15px;
     height          : 80px;
     border-bottom   : 3px solid var(--text-Color);
+    color           : var(--text-Color);
 }
 
 .UserAvatar {

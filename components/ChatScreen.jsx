@@ -96,9 +96,9 @@ export default function ChatScreen(props) {
 
         <div className={styles.HeaderIcons}>
           <IconButton>
-            <MoreVert />
+            <MoreVert style={{ color: 'var(--icon-Color)' }} />
           </IconButton>
-          <IconButton><AttachFile /></IconButton>
+          <IconButton><AttachFile style={{ color: 'var(--icon-Color)' }} /></IconButton>
 
         </div>
 
@@ -112,7 +112,7 @@ export default function ChatScreen(props) {
         <div ref={endOfMessageRef} className={styles.EndOfMessage} />
       </div>
       <form className={styles.ChatInputContainer} onSubmit={sendMessage}>
-        <InsertEmoticon />
+        <InsertEmoticon style={{ color: 'var(--icon-Color)' }} />
         <input
           value={input}
           onChange={(e) => { setInput(e.target.value); }}
@@ -123,7 +123,7 @@ export default function ChatScreen(props) {
 
         <IconButton>
 
-          <MicOutlined />
+          <MicOutlined style={{ color: 'var(--icon-Color)' }} />
         </IconButton>
 
       </form>
