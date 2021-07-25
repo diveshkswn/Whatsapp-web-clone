@@ -1,14 +1,25 @@
+.container {
+
+    max-width   : 400px;
+    min-height  : 110vh;
+    border-right: 1px solid var(--text-Color);
+
+
+
+}
+
 .Header {
     display         : flex;
     position        : sticky;
     top             : 0;
     z-index         : 1;
-    background-color: var(--bg-color);
+    background-color: var(--bg-Color);
     justify-content : space-between;
     align-items     : center;
     padding         : 15px;
     height          : 80px;
-    border-bottom   : 3px solid whitesmoke;
+    border-bottom   : 3px solid var(--text-Color);
+    color           : var(--text-Color);
 }
 
 .UserAvatar {
@@ -34,24 +45,38 @@
     flex         : 1;
 }
 
+.newChatInput {
+    width  : 100% !important;
+    display: flex;
+}
+
 .ChatInput {
     outline-width   : 0;
     border          : 0;
     flex            : 1;
     text-align      : center;
-    background-color: rgb(208, 253, 238);
+    background-color: var(--theme-Color-Secondary);
     padding         : 10px;
 }
 
 .ChatButton {
     display      : inline-block;
-    border-top   : 2px solid whitesmoke !important;
-    border-bottom: 2px solid whitesmoke !important;
+    border-top   : 2px solid var(--text-Color) !important;
+    border-bottom: 2px solid var(--text-Color) !important;
 }
 
 .SidebarButton {
     width        : 100% !important;
-    border-top   : 2px solid whitesmoke !important;
-    border-bottom: 2px solid whitesmoke !important;
+    border-top   : 2px solid var(--text-Color) !important;
+    border-bottom: 2px solid var(--text-Color) !important;
 
+}
+
+.AvatarPanel {
+    position        : absolute;
+    top             : 65px;
+    background-color: var(--theme-Color-Secondary);
+    padding         : 10px;
+    border-radius   : 10px;
+    cursor          : pointer;
 }

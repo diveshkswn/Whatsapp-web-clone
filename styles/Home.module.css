@@ -1,4 +1,29 @@
-.container {
+.Container {
+  display   : flex;
+  height    : 100vh;
+  width     : 100vw;
+  overflow-x: hidden;
 
-  height: 100vh;
+}
+
+
+
+.SidebarContainer {
+  flex              : .25;
+  overflow          : scroll;
+  height            : 100vh;
+  position          : sticky;
+  top               : 0;
+  -ms-overflow-style: none;
+  scrollbar-width   : none;
+}
+
+.SidebarContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.chatContainer {
+
+  flex       : .85;
+  border-left: 1px solid var(--text-Color);
 }

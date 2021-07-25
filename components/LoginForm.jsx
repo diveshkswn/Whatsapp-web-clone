@@ -1,9 +1,10 @@
-import { TextField, Button } from '@material-ui/core';
+import { TextField, Button, IconButton } from '@material-ui/core';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Grow from '@material-ui/core/Grow';
 import { useRouter } from 'next/router';
 import Alert from '@material-ui/lab/Alert';
 import { useState, useRef } from 'react';
+import Brightness6Icon from '@material-ui/icons/Brightness6';
 import { login } from '../Context/Authcontext';
 import styles from '../styles/LoginForm.module.css';
 
@@ -35,8 +36,13 @@ export default function LoginForm(props) {
     <Grow in={loginFormState}>
       <div className={styles.LoginFormContainer}>
         <form className={styles.LoginForm} onSubmit={handleSubmit}>
-          <TextField inputRef={emailRef} label="Email" type="text" />
-          <TextField inputRef={passwordRef} label="Password" type="password" />
+          <TextField
+            inputRef={emailRef}
+            label="Email"
+            type="text"
+            variant="outlined"
+          />
+          <TextField inputRef={passwordRef} label="Password" type="password" variant="outlined" />
           <Button className={styles.LoginButton} type="submit">
             {loading ? <CircularProgress size={25} /> : 'LOGIN' }
           </Button>
@@ -51,6 +57,9 @@ export default function LoginForm(props) {
               SIGNUP
             </Button>
           </span>
+          <IconButton>
+            <Brightness6Icon style={{ color: 'var(--icon-Color)' }} />
+          </IconButton>
         </form>
       </div>
     </Grow>

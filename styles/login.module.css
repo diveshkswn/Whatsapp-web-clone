@@ -14,7 +14,7 @@
 } */
 
 .Login_Container {
-    background-color: whitesmoke;
+    background-color: var(--loginBg-Color);
     height          : 100vh;
     width           : 100vw;
     display         : flex;
@@ -25,5 +25,5 @@
 
 .LoginButton {
     width           : 200px !important;
-    background-color: rgb(106, 199, 106) !important;
+    background-color: var(--theme-Color-Secondary) !important;
 }
