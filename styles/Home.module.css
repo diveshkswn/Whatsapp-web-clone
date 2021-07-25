@@ -48,7 +48,20 @@
   color: var(--theme-Color-Secondary);
 }
 
+.IndexFooterLogo {
+  border-radius   : 20px;
+  height          : 150px;
+  background-color: whitesmoke;
+  display         : flex;
+  justify-content : space-around;
+  align-items     : center;
+  width           : 100%;
+
+}
+
 .LogoVercel {
-  position: relative;
-  width   : 20vh;
+  background-color: whitesmoke;
+  position        : relative;
+  width           : 100px;
+  height          : 50px;
 }

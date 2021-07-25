@@ -65,7 +65,7 @@
 }
 
 .ChatButton {
-    color        : var(--text-Color) !important;
+    color        : var(--button-text-color) !important;
     display      : inline-block;
     border-top   : 2px solid var(--border-Color) !important;
     border-bottom: 2px solid var(--border-Color) !important;

@@ -57,10 +57,17 @@ export default function Home() {
               <a target="_blank" href="https://diveshkswn.github.io/portfolio_/" rel="noreferrer">Divesh Keswani</a>
             </h3>
           </div>
-          <div className={`${styles.LogoVercel} `}>
-            <Image src="/vercel.svg" layout="fill" objectFit="contain" alt="Whatsapp LOGO" />
+          <div className={styles.IndexFooterLogo}>
+            <div className={`${styles.LogoVercel} `}>
+              <Image src="/vercel.svg" layout="fill" objectFit="contain" alt="Whatsapp LOGO" />
 
+            </div>
+            <div className={`${styles.LogoVercel} `}>
+              <Image src="/next-js-seeklogo.com.svg" layout="fill" objectFit="contain" alt="Whatsapp LOGO" />
+
+            </div>
           </div>
+
         </div>
       </div>
     </>

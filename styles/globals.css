@@ -17,6 +17,7 @@ html,
   --chat-Receiver-Bg-Color: whitesmoke;
   --chat-timeStamp-Color  : gray;
   --chat-Input-bg         : white;
+  --button-text-color     : black;
 
 
   --text-Color-Info      : rgb(197, 196, 196);
@@ -52,6 +53,7 @@ html,
   --chat-Receiver-Bg-Color: #262D31;
   --chat-timeStamp-Color  : #8AB2B3;
   --chat-Input-bg         : #2A2F32;
+  --button-text-color     : whitesmoke;
 
 
 
