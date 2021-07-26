@@ -48,7 +48,7 @@
 
 .Input {
     font-size       : 16px;
-    color           : var(--text-Color);
+    color           : var(--button-text-color);
     flex            : 1;
     outline         : 0;
     border          : none;
@@ -61,4 +61,6 @@
 
 
 
-.EndOfMessage {}
+.EndOfMessage {
+    margin-bottom: 70px;
+}

@@ -11,7 +11,7 @@ import { useAuth } from '../Context/Authcontext';
 import { projectFirestore, timestamp } from '../firebase';
 import Message from './Message';
 import getRecipientEmail from '../utils/getRecipientEmail';
-// 3:25
+
 export default function ChatScreen(props) {
   const endOfMessageRef = useRef();
   const { chat, messages } = props;
@@ -53,6 +53,13 @@ export default function ChatScreen(props) {
     ));
   }
 
+  function scrollToBottom() {
+    endOfMessageRef.current.scrollIntoView({
+      behaviour: 'smooth',
+      block: 'start',
+    });
+  }
+
   function sendMessage(e) {
     e.preventDefault();
     // Update last seen
@@ -70,6 +77,7 @@ export default function ChatScreen(props) {
     });
 
     setInput('');
+    scrollToBottom();
   }
 
   const recipient = recipientSnapshot?.docs?.[0]?.data();
