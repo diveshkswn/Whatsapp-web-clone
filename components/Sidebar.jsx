@@ -13,12 +13,17 @@ import { useEffect, useRef, useState } from 'react';
 import EmailValidator from 'email-validator';
 import { useRouter } from 'next/router';
 import { useCollection } from 'react-firebase-hooks/firestore';
+
+import { useDispatch } from 'react-redux';
+import { toggleTheme } from '../redux/features/themeSlice';
 import styles from '../styles/Sidebar.module.css';
 import { logout, useAuth } from '../Context/Authcontext';
 import { projectFirestore } from '../firebase';
 import Chat from './Chat';
 
 export default function Sidebar() {
+  const dispatch = useDispatch();
+
   const { currentUser } = useAuth();
   const [createChat, setCreateChat] = useState(false);
   const chatInputRef = useRef();
@@ -123,7 +128,7 @@ export default function Sidebar() {
             <ChatIcon style={{ color: 'var(--icon-Color)' }} />
           </IconButton>
 
-          <IconButton>
+          <IconButton onClick={() => { dispatch(toggleTheme()); }}>
             <Brightness6Icon style={{ color: 'var(--icon-Color)' }} />
           </IconButton>
         </div>

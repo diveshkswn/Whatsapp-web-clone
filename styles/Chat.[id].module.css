@@ -25,5 +25,5 @@
 
 .chatContainer {
     flex       : .85;
-    border-left: 1px solid var(--text-Color);
+    border-left: 1px solid var(--border-Color);
 }

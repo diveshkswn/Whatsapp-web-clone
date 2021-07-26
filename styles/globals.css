@@ -1,34 +1,73 @@
 html,
 :root {
-  --icon-Color            : inherit;
-  --text-Color            : whitesmoke;
-  --text-Color-Info       : rgb(197, 196, 196);
-  --bg-Color              : white;
-  --bg-Color-Secondary    : whitesmoke;
-  --theme-Color-Secondary : #25d366;
-  --theme-Color-Primary   : #075e54;
-  --chat-Sender-Bg-Color  : #dcf8c6;
-  --chat-Receiver-Bg-Color: whitesmoke;
-  --chat-Hover-Color      : #e9eaeb;
-  --chat-Screen-Bg        : #e5ded8;
+
   --loginBg-Color         : whitesmoke;
+  --icon-Color            : inherit;
   --textInput-bg          : inherit;
   --textInput-Color       : inherit;
+  --text-Color            : whitesmoke;
+  --header-Color          : #075e54;
+  --chat-Screen-Bg        : #e5ded8;
+  --sidebar-bgColor       : whitesmoke;
+  --sidebarChat-BgColor   : whitesmoke;
+  --sidebar-bgColor-hover : #e9eaeb;
+  --sidebarHeader-bgColor : whitesmoke;
+  --border-Color          : whitesmoke;
+  --chat-Sender-Bg-Color  : #dcf8c6;
+  --chat-Receiver-Bg-Color: whitesmoke;
+  --chat-timeStamp-Color  : gray;
+  --chat-Input-bg         : white;
+  --button-text-color     : black;
+
+
+  --text-Color-Info      : rgb(197, 196, 196);
+  --bg-Color             : white;
+  --bg-Color-Secondary   : whitesmoke;
+  --theme-Color-Secondary: #25d366;
+  --theme-Color-Primary  : #075e54;
+
+
+
+  transition: all .5s ease-in;
 }
 
 
 
 
 
+
+
 .dark {
-  color                  : whitesmoke !important;
-  --loginBg-Color        : #131C21;
-  --icon-Color           : whitesmoke;
-  --textInput-bg         : #353535;
-  --textInput-Color      : whitesmoke;
-  --bg-Color-Secondary   : black;
-  --theme-Color          : rgb(46, 87, 46);
-  --theme-Color-Secondary: hsl(120, 37%, 54%);
+  color                   : whitesmoke !important;
+  --loginBg-Color         : #131C21;
+  --icon-Color            : whitesmoke;
+  --textInput-bg          : #353535;
+  --textInput-Color       : whitesmoke;
+  --text-Color            : whitesmoke;
+  --header-Color          : #2A2F32;
+  --chat-Screen-Bg        : #0D1418;
+  --sidebar-bgColor       : #090E11;
+  --sidebar-bgColor-hover : #323739;
+  --sidebarChat-BgColor   : #131C21;
+  --sidebarHeader-bgColor : #2A2F32;
+  --border-Color          : #2A2F32;
+  --chat-Sender-Bg-Color  : #056162;
+  --chat-Receiver-Bg-Color: #262D31;
+  --chat-timeStamp-Color  : #8AB2B3;
+  --chat-Input-bg         : #2A2F32;
+  --button-text-color     : whitesmoke;
+
+
+
+  --text-Color-Info      : rgb(197, 196, 196);
+  --bg-Color             : white;
+  --bg-Color-Secondary   : whitesmoke;
+  --theme-Color-Secondary: #25d366;
+  --theme-Color-Primary  : #075e54;
+
+
+
+  transition: all .5s ease-in;
 
 }
 

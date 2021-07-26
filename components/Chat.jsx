@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import { Avatar } from '@material-ui/core';
 import { useRouter } from 'next/router';
-import styles from '../styles/Chat.module.css';
+import styles from '../styles/chat.module.css';
 import getRecipientEmail from '../utils/getRecipientEmail';
 import { useAuth } from '../Context/Authcontext';
 

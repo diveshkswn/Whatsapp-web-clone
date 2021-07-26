@@ -1,9 +1,9 @@
 .container {
 
-    max-width   : 400px;
-    min-height  : 110vh;
-    border-right: 1px solid var(--text-Color);
-
+    max-width       : 400px;
+    min-height      : 110vh;
+    border-right    : 1px solid var(--border-Color);
+    background-color: var(--sidebar-bgColor);
 
 
 }
@@ -13,12 +13,12 @@
     position        : sticky;
     top             : 0;
     z-index         : 1;
-    background-color: var(--bg-Color);
+    background-color: var(--sidebarHeader-bgColor);
     justify-content : space-between;
     align-items     : center;
     padding         : 15px;
     height          : 80px;
-    border-bottom   : 3px solid var(--text-Color);
+    border-bottom   : 3px solid var(--border-Color);
     color           : var(--text-Color);
 }
 
@@ -40,14 +40,19 @@
 }
 
 .SeachInput {
-    outline-width: 0;
-    border       : 0;
-    flex         : 1;
+    padding-left    : 15px;
+    outline-width   : 0;
+    border          : 0;
+    flex            : 1;
+    height          : 40px;
+    border-radius   : 20px;
+    background-color: var(--sidebar-bgColor-hover);
 }
 
 .newChatInput {
     width  : 100% !important;
     display: flex;
+
 }
 
 .ChatInput {
@@ -60,15 +65,18 @@
 }
 
 .ChatButton {
+    color        : var(--button-text-color) !important;
     display      : inline-block;
-    border-top   : 2px solid var(--text-Color) !important;
-    border-bottom: 2px solid var(--text-Color) !important;
+    border-top   : 2px solid var(--border-Color) !important;
+    border-bottom: 2px solid var(--border-Color) !important;
 }
 
 .SidebarButton {
-    width        : 100% !important;
-    border-top   : 2px solid var(--text-Color) !important;
-    border-bottom: 2px solid var(--text-Color) !important;
+    color           : var(--text-Color) !important;
+    width           : 100% !important;
+    border-top      : .5px solid var(--border-Color) !important;
+    border-bottom   : .5px solid var(--border-Color) !important;
+    background-color: var(--theme-Color-Primary) !important;
 
 }
 

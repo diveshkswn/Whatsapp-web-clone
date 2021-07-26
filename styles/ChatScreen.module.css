@@ -1,6 +1,6 @@
 .ChatHeader {
     position        : sticky;
-    background-color: var(--theme-Color-Primary);
+    background-color: var(--header-Color);
     top             : 0px;
     height          : 80px;
     padding         : 10px;
@@ -36,22 +36,23 @@
 
 
 .ChatInputContainer {
-
     display         : flex;
     align-items     : center;
     padding         : 14px;
     position        : sticky;
     bottom          : 0;
-    background-color: var(--bg-Color);
+    background-color: var(--chat-Input-bg);
     z-index         : 100;
 
 }
 
 .Input {
+    font-size       : 16px;
+    color           : var(--text-Color);
     flex            : 1;
     outline         : 0;
     border          : none;
-    background-color: var(--bg-Color-Secondary);
+    background-color: var(--sidebar-bgColor-hover);
     padding         : 20px;
     margin-left     : 15px;
     margin-right    : 15px;
