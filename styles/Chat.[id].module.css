@@ -23,7 +23,21 @@
     display: none;
 }
 
+.SidebarContainer::-webkit-scrollbar-track {
+    display: none;
+}
+
 .chatContainer {
     flex       : .85;
     border-left: 1px solid var(--border-Color);
+
+}
+
+.chatContainer::-webkit-scrollbar {
+    display: none;
+}
+
+
+.chatContainer::-webkit-scrollbar-track {
+    display: none;
 }

@@ -7,6 +7,10 @@
 
 }
 
+.mediaQueryMsg {
+    text-align: center;
+}
+
 /* .Logo.Min {
     width : 20vw;
     height: 20vh;
