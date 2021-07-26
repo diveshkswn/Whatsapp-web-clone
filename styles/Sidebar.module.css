@@ -2,7 +2,7 @@
 
     max-width       : 400px;
     min-height      : 110vh;
-    border-right    : 1px solid var(--text-Color);
+    border-right    : 1px solid var(--border-Color);
     background-color: var(--sidebar-bgColor);
 
 
@@ -18,7 +18,7 @@
     align-items     : center;
     padding         : 15px;
     height          : 80px;
-    border-bottom   : 3px solid var(--text-Color);
+    border-bottom   : 3px solid var(--border-Color);
     color           : var(--text-Color);
 }
 
